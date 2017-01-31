@@ -344,6 +344,10 @@ class Lightpdo extends \PDO
         return $fieldName;
     }
 
+    /**
+     * @param $sql
+     * @return bool
+     */
     public function getOne($sql) {
         $rs = parent::query($sql);
         $res = $rs->fetchAll(parent::FETCH_ASSOC);
